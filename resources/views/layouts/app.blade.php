@@ -13,9 +13,14 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- Tailwind CSS CDN -->
+        <link href="<https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css>" rel="stylesheet">
+
     </head>
+
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        {{-- <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -31,6 +36,12 @@
             <main>
                 {{ $slot }}
             </main>
-        </div>
+        </div> --}}
+        <body class="bg-gray-100">
+            <div class="container mx-auto p-4">
+                @yield('content')
+            </div>
+        </body>
     </body>
+
 </html>
